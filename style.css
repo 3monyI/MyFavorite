@@ -1,0 +1,54 @@
+body {
+    background-color: grey;
+    color: rebeccapurple;
+}
+/*Styling the list of items in the nav bar*/
+nav ul {
+    display: flex;
+    flex-wrap:wrap;
+    margin:0;
+    padding:0;
+    z-index:10;
+}
+/* Styling the space of each item */
+nav li {
+    list-style:none;
+    background-color: lightblue;
+    color: palevioletred;
+    margin:0;
+    flex:1;
+    min-width:200px;
+    text-align: center;
+    display: flex;
+    position:relative;
+}
+nav a, nav a:visited {
+    text-decoration:none;
+    width: 100%;
+    padding:8px 0px;
+    color: palevioletred;
+}
+nav a:hover {
+    color: forestgreen;
+    background-color: rgb(173, 230, 180);
+}
+nav a:hover, nav a.active {
+    color: lightseagreen;
+    background-color: rgb(173, 230, 180);
+}
+.dropdown-content {
+    position:absolute;
+    top:37px;
+    width:100%;
+    display:none;
+    z-index:20;
+}
+nav li:hover .dropdown-content {
+    display:block;
+}
+.dropdown-content a {
+    font-weight:bold;
+}
+.dropdown-content ul {
+    flex-direction:column;
+}
